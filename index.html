@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مطعم بيت الزين</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf5ec;--card:#fff;--text:#2a1a1a;--muted:#7a6a68;--brand:#7a1f2b;--gold:#b8902f;--line:#e8dccb;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1a1112;--card:#261a1b;--text:#f6ecdf;--muted:#b8a79f;--brand:#c24558;--gold:#d9b255;--line:#3a2a2b;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1a1112;--card:#261a1b;--text:#f6ecdf;--muted:#b8a79f;--brand:#c24558;--gold:#d9b255;--line:#3a2a2b;color-scheme:dark}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Cairo',Tahoma,Arial,sans-serif;line-height:1.7}
+.hero{background:linear-gradient(160deg,#5c1520,#7a1f2b 60%,#9a3a2a);color:#fff;text-align:center;padding:56px 20px 64px}
+.logo{width:96px;height:96px;border-radius:50%;border:3px solid #d9b255;margin:0 auto 14px;display:flex;align-items:center;justify-content:center;font-size:40px;background:rgba(255,255,255,.08)}
+.hero h1{margin:0;font-size:2.4rem;font-weight:800}
+.hero p{margin:6px 0 22px;color:#f1dfc4}
+.btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 22px;border-radius:30px;font-weight:600;text-decoration:none;font-size:1rem}
+.b1{background:#d9b255;color:#2a1a1a}.b2{background:#25d366;color:#fff}.b3{border:1.5px solid #d9b255;color:#fff}
+.info{max-width:900px;margin:-28px auto 0;padding:0 16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.info div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,.08)}
+.info small{display:block;color:var(--muted)}.info b{font-size:1.05rem}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-top:28px;padding:10px 12px;padding-top:calc(env(safe-area-inset-top,0px) + 10px);display:flex;gap:8px;overflow-x:auto}
+nav a{white-space:nowrap;padding:6px 14px;border-radius:20px;border:1px solid var(--line);background:var(--card);color:var(--text);text-decoration:none;font-size:.92rem}
+nav a:hover{background:var(--brand);color:#fff}
+main{max-width:900px;margin:0 auto;padding:10px 16px 40px}
+h2{background:var(--brand);color:#fff;display:inline-block;padding:6px 26px;border-radius:10px;margin:30px 0 12px;font-size:1.25rem}
+.note{color:var(--muted);font-size:.85rem;margin:-4px 0 8px}
+.grid{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 16px}
+.item{display:flex;align-items:baseline;gap:8px;padding:10px 0;border-bottom:1px dashed var(--line)}
+.item:last-child{border:0}
+.item span.d{flex:1;border-bottom:1px dotted var(--line);transform:translateY(-4px)}
+.item .p{color:var(--gold);font-weight:800;white-space:nowrap}
+.item .p small{font-weight:400;color:var(--muted)}
+footer{background:#2a1a1a;color:#e9dcc6;text-align:center;padding:28px 16px calc(28px + env(safe-area-inset-bottom,0px))}
+footer a{color:#d9b255}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="logo">🍽️</div>
+  <h1>مطعم بيت الزين</h1>
+  <p>مشاوي · باجة · دجاج · غربي · صاج</p>
+  <div class="btns">
+    <a class="btn b1" href="tel:07721400506">اتصل للطلب</a>
+    <a class="btn b2" href="https://wa.me/9647721400506">واتساب</a>
+    <a class="btn b3" href="#menu">المنيو</a>
+  </div>
+</header>
+
+<section class="info">
+  <div><small>ساعات العمل</small><b>١١ صباحاً – ٤ فجراً</b></div>
+  <div><small>العنوان</small><b>مقابل مركز أبو دشير</b></div>
+  <div><small>الكاشير / واتساب</small><b dir="ltr">07721400506</b></div>
+</section>
+
+<nav id="tabs"></nav>
+<main id="menu"></main>
+
+<footer>
+  <p>مطعم بيت الزين – مقابل مركز أبو دشير</p>
+  <p>للطلب والاستفسار: <a href="tel:07721400506" dir="ltr">07721400506</a></p>
+  <p><a href="https://www.google.com/maps/search/?api=1&query=%D9%85%D8%B7%D8%B9%D9%85+%D8%A8%D9%8A%D8%AA+%D8%A7%D9%84%D8%B2%D9%8A%D9%86+%D9%85%D8%B1%D9%83%D8%B2+%D8%A3%D8%A8%D9%88+%D8%AF%D8%B4%D9%8A%D8%B1">افتح الموقع على خرائط Google</a></p>
+</footer>
+
+<script>
+var M=[
+["المشاوي",[["نفر كباب لحم",12000],["نفر كباب دجاج",10000],["نفر تكة لحم",12000],["نفر تكة دجاج",12000],["نفر معلاك",12000],["نفر قلب",12000],["نفر بيض غنم",12000]]],
+["المشاوي بالوزن",[["كيلو كباب لحم",22000],["كيلو كباب دجاج",16000],["½ كيلو كباب لحم",11000],["½ كيلو كباب دجاج",8000],["¼ كيلو كباب لحم",6000],["¼ كيلو كباب دجاج",5000]],"تشمل السفري فقط"],
+["القسم الشرقي",[["نفر تمن ومرق",4000],["صينية دليمية",6000],["قوزي",15000],["تشريب لحم",15000],["ربع عالتمن والمرق",6000]]],
+["الباجة",[["نفر باجة",7000],["نص راس باجة",15000],["راس باجة كامل",30000],["نفر ممبار",10000],["نص نفر ممبار",5000]]],
+["الدجاج والمسكوف",[["دجاجة شوي",12000],["دجاجة فحم",12000],["نصف دجاجة شوي",6000],["نصف دجاجة فحم",6000],["نفر أجنحة عالتمن",12000],["نصف أجنحة عالتمن",6000]]],
+["الكنتاكي والستربس",[["٣ قطع كنتاكي",6000],["٤ قطع كنتاكي",7000],["٥ قطع كنتاكي",8000],["٧ قطع كنتاكي",10000],["١٠ قطع كنتاكي",15000],["ريزو كلاسك",5000],["ريزو شاورما لحم",6000],["ريزو شاورما دجاج",5000],["وجبة زنكر",5000],["قدح فنكر",1000],["طبق فنكر",2000]]],
+["القسم الغربي",[["بيتزا صغير",6000],["بيتزا وسط",8000],["بيتزا عائلي",10000]]],
+["الصاج",[["صاج إيطالي",4000],["صاج لغم",4000],["صاج شاورما لحم",2500],["صاج شاورما دجاج",2500]]],
+["السندويش والمقبلات",[["برگر لحم",3000],["زنكر",2500],["مقبلات",2000]]]
+];
+var tabs=document.getElementById('tabs'),main=document.getElementById('menu');
+M.forEach(function(c,i){
+  var a=document.createElement('a');a.href='#s'+i;a.textContent=c[0];tabs.appendChild(a);
+  var s=document.createElement('section');s.id='s'+i;
+  var h=document.createElement('h2');h.textContent=c[0];s.appendChild(h);
+  if(c[2]){var n=document.createElement('div');n.className='note';n.textContent=c[2];s.appendChild(n);}
+  var g=document.createElement('div');g.className='grid';
+  c[1].forEach(function(it){
+    var r=document.createElement('div');r.className='item';
+    var t=document.createElement('span');t.textContent=it[0];
+    var d=document.createElement('span');d.className='d';
+    var p=document.createElement('span');p.className='p';
+    p.innerHTML=it[1].toLocaleString('en-US')+' <small>د.ع</small>';
+    r.appendChild(t);r.appendChild(d);r.appendChild(p);g.appendChild(r);
+  });
+  s.appendChild(g);main.appendChild(s);
+});
+</script>
+</body>
+</html>
